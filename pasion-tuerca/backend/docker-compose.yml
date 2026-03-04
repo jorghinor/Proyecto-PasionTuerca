@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: pasiontuerca
+      POSTGRES_USER: prueba
+      POSTGRES_PASSWORD: futjor8
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  db-data:

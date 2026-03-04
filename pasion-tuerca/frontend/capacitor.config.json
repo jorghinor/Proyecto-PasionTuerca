@@ -1,0 +1,6 @@
+{
+  "appId": "com.pasiontuerca.app",
+  "appName": "PasionTuerca",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

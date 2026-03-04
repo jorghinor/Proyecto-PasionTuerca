@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-gray-100;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  @apply max-w-5xl mx-auto p-4;
+}
+
+/* Estilos para un look más vibrante y de neón */
+.button {
+  @apply bg-cyan-500 text-white font-bold px-6 py-2 rounded-full shadow-lg shadow-cyan-500/50 transition-all duration-300 ease-in-out;
+  @apply hover:bg-cyan-400 hover:shadow-xl hover:shadow-cyan-400/50;
+}
+
+.glowing-border {
+  border: 1px solid #fff;
+  box-shadow:
+    0 0 5px #fff,
+    0 0 6px #fff,
+    0 0 10px #00bfff, /* Sky blue for the outer glow */
+    0 0 20px #00bfff;
+  border-radius: 0.75rem; /* 12px */
+  @apply bg-black bg-opacity-50 p-4;
+}
+
+header.app-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/uploads/1758833083963_futbol1.jpg');
+  background-size: cover;
+  background-position: center;
+  @apply bg-gray-900 bg-opacity-70 backdrop-blur-sm;
+}
+
+footer.app-footer {
+  @apply bg-gray-900 bg-opacity-70 backdrop-blur-sm;
+}
+
+.glowing-green-shadow {
+  box-shadow:
+    0 0 8px rgba(55, 255, 20, 0.7),
+    0 0 16px rgba(55, 255, 20, 0.88);
+}
+
+/* Animación para el título principal */
+#animated-title {
+  display: inline-block; /* Needed for transform to work correctly */
+  color: #f0fff0; /* Honeydew color for better contrast with green glow */
+  text-shadow:
+    0 0 5px #39FF14,
+    0 0 10px #39FF14,
+    0 0 20px #39FF14,
+    0 0 30px #39FF14; /* Neon green glow */
+  animation: move-and-return-3d 6s ease-in-out infinite;
+}
+
+@keyframes move-and-return-3d {
+  0%, 100% {
+    transform: translateX(0) perspective(800px) rotateY(0);
+  }
+  50% {
+    /* Move right towards the button, with 3D rotation */
+    transform: translateX(150px) perspective(800px) rotateY(25deg);
+  }
+}
+
+.footer-glow {
+  color: #f0fff0;
+  text-shadow:
+    0 0 5px #39FF14,
+    0 0 10px #39FF14;
+}

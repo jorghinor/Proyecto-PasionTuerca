@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pasiontuerca
+    username: prueba
+    password: futjor8
+    driver-class-name: org.postgresql.Driver
+    #driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Postgres example:
+# spring:
+#   datasource:
+#     url: jdbc:postgresql://db:5432/pasion
+#     username: pasion
+#     password: pasion
+#     driver-class-name: org.postgresql.Driver
+
+pasion:
+  uploads-dir: uploads
+
+jwt:
+  secret: change-this-secret-to-a-strong-random-value-change-me-to-32-plus-chars
+  access-expiration-minutes: 15
+  refresh-expiration-days: 7
+
+logging:
+  level:
+    root: INFO
